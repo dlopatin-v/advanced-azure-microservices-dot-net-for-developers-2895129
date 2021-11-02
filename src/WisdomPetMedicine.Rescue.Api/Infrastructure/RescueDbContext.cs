@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WisdomPetMedicine.Pet.Api.IntegrationEvents;
 using WisdomPetMedicine.Rescue.Domain.Entities;
 
 namespace WisdomPetMedicine.Rescue.Api.Infrastructure
@@ -12,6 +13,7 @@ namespace WisdomPetMedicine.Rescue.Api.Infrastructure
         
         public DbSet<Adopter> Adopters { get; set; }
         public DbSet<RescuedAnimal> RescuedAnimals { get; set; }
+        public DbSet<PetFlaggedForAdoptionIntegrationEvent> RescuedAnimalMetadata { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
